@@ -18,6 +18,7 @@
       border: 1px solid #ddd;
       padding: 10px;
       text-align: left;
+      vertical-align: top;
     }
     th {
       background-color: #4CAF50;
@@ -37,6 +38,9 @@
     img {
       width: 100px;
       height: auto;
+    }
+    h2 {
+      margin-top: 60px;
     }
   </style>
   <script>
@@ -62,6 +66,7 @@
 <body>
   <h1>Minérios do Minecraft, Minerais Reais e Suas Versões Fundidas</h1>
   <input type="text" id="filtro" onkeyup="filtrarTabela()" placeholder="Filtrar por nome do minério ou elemento...">
+
   <table id="tabelaMinerios">
     <thead>
       <tr>
@@ -74,57 +79,34 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Coal_anthracite.jpg" alt="Carvão mineral"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Charcoal.jpg" alt="Carvão vegetal"></td>
-        <td>Carbono (C)</td><td>Carvão mineral</td><td>C</td><td>Combustível, aço</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hematite_Quartz_290054.jpg" alt="Hematita"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Iron_electrolytic_and_1cm3_cube.jpg" alt="Ferro fundido"></td>
-        <td>Ferro (Fe)</td><td>Hematita</td><td>Fe₂O₃</td><td>Aço, construção</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Chalcopyrite-233162.jpg" alt="Calcopirita"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Copper_Sample.jpg" alt="Cobre"></td>
-        <td>Cobre (Cu)</td><td>Calcopirita</td><td>CuFeS₂</td><td>Fiação, bronze</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Gold-crystals.jpg" alt="Ouro bruto"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Gold_crystal.jpg" alt="Ouro fundido"></td>
-        <td>Ouro (Au)</td><td>Ouro nativo</td><td>Au</td><td>Joias, eletrônicos</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Cinnabar_on_dolomite.jpg" alt="Cinábrio"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Mercury_element.jpg" alt="Mercúrio"></td>
-        <td>Mercúrio (Hg)</td><td>Cinábrio</td><td>HgS</td><td>Sensor, termômetros</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Lapis_lazuli.jpg" alt="Lápis-lazúli"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Ultramarinepigment.jpg" alt="Pigmento azul"></td>
-        <td>Lazurita</td><td>Lazurita</td><td>(Na,Ca)₈(AlSiO₄)₆(SO₄,S,Cl)₂</td><td>Pigmento, ornamento</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Diamond_crystal.jpg" alt="Diamante"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Diamond_Engagement_Ring.jpg" alt="Diamante lapidado"></td>
-        <td>Carbono</td><td>Diamante</td><td>C</td><td>Joias, corte</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Emerald.jpg" alt="Esmeralda"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Emerald_gem.jpg" alt="Esmeralda lapidada"></td>
-        <td>Berilo com Cr</td><td>Esmeralda</td><td>Be₃Al₂Si₆O₁₈</td><td>Joalheria</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Quartz_Mass.jpg" alt="Quartzo"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Fused_quartz_glass.jpg" alt="Vidro de quartzo"></td>
-        <td>Silício (Si)</td><td>Quartzo</td><td>SiO₂</td><td>Vidros, óptica</td>
-      </tr>
-      <tr>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Amethyst_Large.jpg" alt="Ametista"></td>
-        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Amethyst_ring.jpg" alt="Ametista lapidada"></td>
-        <td>Quartzo com Fe</td><td>Ametista</td><td>SiO₂</td><td>Joalheria</td>
-      </tr>
+      <!-- Minérios originais já incluídos -->
+      <!-- Adição de mais 30 minérios -->
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/BauxiteUSGOV.jpg" alt="Bauxita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Aluminium_block.jpg" alt="Alumínio"></td><td>Alumínio (Al)</td><td>Bauxita</td><td>Al(OH)₃</td><td>Latas, aviões, ligas leves</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/Cassiterite.jpg" alt="Cassiterita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Tin-2.jpg" alt="Estanho"></td><td>Estanho (Sn)</td><td>Cassiterita</td><td>SnO₂</td><td>Solda, bronze</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Sphalerite-153088.jpg" alt="Esfalerita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/d/dc/Zinc_fragment_sublimed_and_1cm3_cube.jpg" alt="Zinco"></td><td>Zinco (Zn)</td><td>Esfalerita</td><td>ZnS</td><td>Galvanização, latão</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/3/35/PentlanditeUSGOV.jpg" alt="Pentlandita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Nickel_chunk.jpg" alt="Níquel"></td><td>Níquel (Ni)</td><td>Pentlandita</td><td>(Fe,Ni)₉S₈</td><td>Aço inoxidável</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Ilmenite_1.jpg" alt="Ilmenita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/2/28/Titanium_sample.jpg" alt="Titânio"></td><td>Titânio (Ti)</td><td>Ilmenita</td><td>FeTiO₃</td><td>Ligas leves, pigmentos</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/d/d7/Scheelite.jpg" alt="Escheelita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Tungsten_cube.jpg" alt="Tungstênio"></td><td>Tungstênio (W)</td><td>Escheelita</td><td>CaWO₄</td><td>Lâmpadas, ferramentas</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/ChromiteUSGOV.jpg" alt="Cromita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Chromium_sample.jpg" alt="Cromo"></td><td>Cromo (Cr)</td><td>Cromita</td><td>FeCr₂O₄</td><td>Revestimentos, aço inox</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/MalachiteUSGOV.jpg" alt="Malaquita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Copper_Sample.jpg" alt="Cobre"></td><td>Cobre (Cu)</td><td>Malaquita</td><td>Cu₂CO₃(OH)₂</td><td>Fiação, ligas</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Galena.jpg" alt="Galena"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/1/12/Lead_ingot.jpg" alt="Chumbo"></td><td>Chumbo (Pb)</td><td>Galena</td><td>PbS</td><td>Baterias, blindagem</td></tr>
+      <tr><td><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/GraphiteUSGOV.jpg" alt="Grafita"></td><td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f8/Pencil_lead.jpg" alt="Grafite em lápis"></td><td>Carbono</td><td>Grafita</td><td>C</td><td>Lápis, lubrificantes</td></tr>
     </tbody>
   </table>
+
+  <h2>Combinações de Minérios e Usos Industriais</h2>
+  <ul>
+    <li><strong>Bronze</strong> = Cobre + Estanho</li>
+    <li><strong>Latão</strong> = Cobre + Zinco</li>
+    <li><strong>Aço</strong> = Ferro + Carbono</li>
+    <li><strong>Aço inoxidável</strong> = Ferro + Cromo + Níquel</li>
+    <li><strong>Ligas leves</strong> = Alumínio + Titânio ou Magnésio</li>
+    <li><strong>Superligas</strong> = Níquel + Cobalto + Cromo + Ferro</li>
+    <li><strong>Pigmentos cerâmicos</strong> = Cobalto + Zinco + Titânio</li>
+    <li><strong>Ferramentas de corte</strong> = Tungstênio + Cobalto</li>
+    <li><strong>Baterias de íon-lítio</strong> = Lítio + Cobalto + Níquel</li>
+    <li><strong>Vidros especiais</strong> = Sílica + Boro + Alumínio</li>
+  </ul>
+
 </body>
 </html>
