@@ -34,6 +34,10 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
+    img {
+      width: 100px;
+      height: auto;
+    }
   </style>
   <script>
     function filtrarTabela() {
@@ -56,12 +60,13 @@
   </script>
 </head>
 <body>
-  <h1>Minérios do Minecraft e Seus Correspondentes Reais + Minerais Reais</h1>
+  <h1>Minérios do Minecraft, Minerais Reais e Suas Versões Fundidas</h1>
   <input type="text" id="filtro" onkeyup="filtrarTabela()" placeholder="Filtrar por nome do minério ou elemento...">
   <table id="tabelaMinerios">
     <thead>
       <tr>
-        <th>Minério no Minecraft</th>
+        <th>Imagem do Minério</th>
+        <th>Imagem do Metal Fundido</th>
         <th>Elemento/Componente</th>
         <th>Mineral Real</th>
         <th>Fórmula Química</th>
@@ -69,25 +74,56 @@
       </tr>
     </thead>
     <tbody>
-      <tr><td>Carvão</td><td>Carbono (C)</td><td>Carvão mineral (antracito, hulha)</td><td>C</td><td>Combustível, produção de aço (com ferro)</td></tr>
-      <tr><td>Ferro</td><td>Ferro (Fe)</td><td>Hematita, Magnetita</td><td>Fe₂O₃ / Fe₃O₄</td><td>Produção de aço (com carbono), ligas metálicas</td></tr>
-      <tr><td>Cobre</td><td>Cobre (Cu)</td><td>Calcopirita, Malaquita</td><td>CuFeS₂ / Cu₂CO₃(OH)₂</td><td>Fiação elétrica, ligas com estanho (bronze)</td></tr>
-      <tr><td>Ouro</td><td>Ouro (Au)</td><td>Ouro nativo</td><td>Au</td><td>Joalheria, eletrônica, contatos metálicos</td></tr>
-      <tr><td>Redstone</td><td>Ficcional</td><td>Sugestão: Cinábrio</td><td>HgS</td><td>Referência a circuitos; na vida real: sensores (quartzo dopado)</td></tr>
-      <tr><td>Lápis-lazúli</td><td>Lazurita</td><td>Lazurita</td><td>(Na,Ca)₈(AlSiO₄)₆(SO₄,S,Cl)₂</td><td>Pigmentos (azul ultramar), ornamentos</td></tr>
-      <tr><td>Diamante</td><td>Carbono</td><td>Diamante</td><td>C</td><td>Corte de materiais, joalheria, abrasivos industriais</td></tr>
-      <tr><td>Esmeralda</td><td>Berilo com Cr</td><td>Esmeralda</td><td>Be₃Al₂Si₆O₁₈</td><td>Joalheria, colecionismo</td></tr>
-      <tr><td>Quartzo do Nether</td><td>Dióxido de Silício</td><td>Quartzo</td><td>SiO₂</td><td>Vidros, eletrônica, componentes ópticos</td></tr>
-      <tr><td>Ametista</td><td>Quartzo com Fe</td><td>Ametista</td><td>SiO₂</td><td>Joalheria, decoração, colecionismo</td></tr>
-      <tr><td>Netherita</td><td>Ficcional</td><td>Não aplicável</td><td>—</td><td>Inspirada em superligas metálicas; aplicação fictícia</td></tr>
-      <tr><td>—</td><td>Alumínio (Al)</td><td>Bauxita</td><td>Al(OH)₃ + Fe₂O₃</td><td>Produção de alumínio metálico</td></tr>
-      <tr><td>—</td><td>Chumbo (Pb)</td><td>Galena</td><td>PbS</td><td>Baterias, proteção contra radiação</td></tr>
-      <tr><td>—</td><td>Estanho (Sn)</td><td>Cassiterita</td><td>SnO₂</td><td>Soldas, ligas (bronze)</td></tr>
-      <tr><td>—</td><td>Zinco (Zn)</td><td>Esfalerita</td><td>ZnS</td><td>Galvanização de aço, ligas metálicas</td></tr>
-      <tr><td>—</td><td>Lítio (Li)</td><td>Espodumena</td><td>LiAl(SiO₃)₂</td><td>Baterias recarregáveis</td></tr>
-      <tr><td>—</td><td>Urânio (U)</td><td>Uraninita</td><td>UO₂</td><td>Combustível nuclear</td></tr>
-      <tr><td>—</td><td>Níquel (Ni)</td><td>Pentlandita</td><td>(Fe,Ni)₉S₈</td><td>Ligas inoxidáveis, baterias</td></tr>
-      <tr><td>—</td><td>Titânio (Ti)</td><td>Rutilo</td><td>TiO₂</td><td>Ligas leves, pigmentos brancos</td></tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Coal_anthracite.jpg" alt="Carvão mineral"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/Charcoal.jpg" alt="Carvão vegetal"></td>
+        <td>Carbono (C)</td><td>Carvão mineral</td><td>C</td><td>Combustível, aço</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Hematite_Quartz_290054.jpg" alt="Hematita"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Iron_electrolytic_and_1cm3_cube.jpg" alt="Ferro fundido"></td>
+        <td>Ferro (Fe)</td><td>Hematita</td><td>Fe₂O₃</td><td>Aço, construção</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Chalcopyrite-233162.jpg" alt="Calcopirita"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Copper_Sample.jpg" alt="Cobre"></td>
+        <td>Cobre (Cu)</td><td>Calcopirita</td><td>CuFeS₂</td><td>Fiação, bronze</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Gold-crystals.jpg" alt="Ouro bruto"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/7/76/Gold_crystal.jpg" alt="Ouro fundido"></td>
+        <td>Ouro (Au)</td><td>Ouro nativo</td><td>Au</td><td>Joias, eletrônicos</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Cinnabar_on_dolomite.jpg" alt="Cinábrio"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Mercury_element.jpg" alt="Mercúrio"></td>
+        <td>Mercúrio (Hg)</td><td>Cinábrio</td><td>HgS</td><td>Sensor, termômetros</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Lapis_lazuli.jpg" alt="Lápis-lazúli"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/Ultramarinepigment.jpg" alt="Pigmento azul"></td>
+        <td>Lazurita</td><td>Lazurita</td><td>(Na,Ca)₈(AlSiO₄)₆(SO₄,S,Cl)₂</td><td>Pigmento, ornamento</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Diamond_crystal.jpg" alt="Diamante"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/Diamond_Engagement_Ring.jpg" alt="Diamante lapidado"></td>
+        <td>Carbono</td><td>Diamante</td><td>C</td><td>Joias, corte</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Emerald.jpg" alt="Esmeralda"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Emerald_gem.jpg" alt="Esmeralda lapidada"></td>
+        <td>Berilo com Cr</td><td>Esmeralda</td><td>Be₃Al₂Si₆O₁₈</td><td>Joalheria</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/6/60/Quartz_Mass.jpg" alt="Quartzo"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Fused_quartz_glass.jpg" alt="Vidro de quartzo"></td>
+        <td>Silício (Si)</td><td>Quartzo</td><td>SiO₂</td><td>Vidros, óptica</td>
+      </tr>
+      <tr>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Amethyst_Large.jpg" alt="Ametista"></td>
+        <td><img src="https://upload.wikimedia.org/wikipedia/commons/0/07/Amethyst_ring.jpg" alt="Ametista lapidada"></td>
+        <td>Quartzo com Fe</td><td>Ametista</td><td>SiO₂</td><td>Joalheria</td>
+      </tr>
     </tbody>
   </table>
 </body>
