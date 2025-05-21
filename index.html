@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Minérios do Minecraft e Minerais Reais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    input {
+      width: 300px;
+      padding: 10px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  </style>
+  <script>
+    function filtrarTabela() {
+      const input = document.getElementById("filtro");
+      const filtro = input.value.toUpperCase();
+      const tabela = document.getElementById("tabelaMinerios");
+      const linhas = tabela.getElementsByTagName("tr");
+      for (let i = 1; i < linhas.length; i++) {
+        const colunas = linhas[i].getElementsByTagName("td");
+        let visivel = false;
+        for (let j = 0; j < colunas.length; j++) {
+          if (colunas[j].textContent.toUpperCase().includes(filtro)) {
+            visivel = true;
+            break;
+          }
+        }
+        linhas[i].style.display = visivel ? "" : "none";
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Minérios do Minecraft e Seus Correspondentes Reais + Minerais Reais</h1>
+  <input type="text" id="filtro" onkeyup="filtrarTabela()" placeholder="Filtrar por nome do minério ou elemento...">
+  <table id="tabelaMinerios">
+    <thead>
+      <tr>
+        <th>Minério no Minecraft</th>
+        <th>Elemento/Componente</th>
+        <th>Mineral Real</th>
+        <th>Fórmula Química</th>
+        <th>Combinações ou Usos Comuns</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Carvão</td><td>Carbono (C)</td><td>Carvão mineral (antracito, hulha)</td><td>C</td><td>Combustível, produção de aço (com ferro)</td></tr>
+      <tr><td>Ferro</td><td>Ferro (Fe)</td><td>Hematita, Magnetita</td><td>Fe₂O₃ / Fe₃O₄</td><td>Produção de aço (com carbono), ligas metálicas</td></tr>
+      <tr><td>Cobre</td><td>Cobre (Cu)</td><td>Calcopirita, Malaquita</td><td>CuFeS₂ / Cu₂CO₃(OH)₂</td><td>Fiação elétrica, ligas com estanho (bronze)</td></tr>
+      <tr><td>Ouro</td><td>Ouro (Au)</td><td>Ouro nativo</td><td>Au</td><td>Joalheria, eletrônica, contatos metálicos</td></tr>
+      <tr><td>Redstone</td><td>Ficcional</td><td>Sugestão: Cinábrio</td><td>HgS</td><td>Referência a circuitos; na vida real: sensores (quartzo dopado)</td></tr>
+      <tr><td>Lápis-lazúli</td><td>Lazurita</td><td>Lazurita</td><td>(Na,Ca)₈(AlSiO₄)₆(SO₄,S,Cl)₂</td><td>Pigmentos (azul ultramar), ornamentos</td></tr>
+      <tr><td>Diamante</td><td>Carbono</td><td>Diamante</td><td>C</td><td>Corte de materiais, joalheria, abrasivos industriais</td></tr>
+      <tr><td>Esmeralda</td><td>Berilo com Cr</td><td>Esmeralda</td><td>Be₃Al₂Si₆O₁₈</td><td>Joalheria, colecionismo</td></tr>
+      <tr><td>Quartzo do Nether</td><td>Dióxido de Silício</td><td>Quartzo</td><td>SiO₂</td><td>Vidros, eletrônica, componentes ópticos</td></tr>
+      <tr><td>Ametista</td><td>Quartzo com Fe</td><td>Ametista</td><td>SiO₂</td><td>Joalheria, decoração, colecionismo</td></tr>
+      <tr><td>Netherita</td><td>Ficcional</td><td>Não aplicável</td><td>—</td><td>Inspirada em superligas metálicas; aplicação fictícia</td></tr>
+      <tr><td>—</td><td>Alumínio (Al)</td><td>Bauxita</td><td>Al(OH)₃ + Fe₂O₃</td><td>Produção de alumínio metálico</td></tr>
+      <tr><td>—</td><td>Chumbo (Pb)</td><td>Galena</td><td>PbS</td><td>Baterias, proteção contra radiação</td></tr>
+      <tr><td>—</td><td>Estanho (Sn)</td><td>Cassiterita</td><td>SnO₂</td><td>Soldas, ligas (bronze)</td></tr>
+      <tr><td>—</td><td>Zinco (Zn)</td><td>Esfalerita</td><td>ZnS</td><td>Galvanização de aço, ligas metálicas</td></tr>
+      <tr><td>—</td><td>Lítio (Li)</td><td>Espodumena</td><td>LiAl(SiO₃)₂</td><td>Baterias recarregáveis</td></tr>
+      <tr><td>—</td><td>Urânio (U)</td><td>Uraninita</td><td>UO₂</td><td>Combustível nuclear</td></tr>
+      <tr><td>—</td><td>Níquel (Ni)</td><td>Pentlandita</td><td>(Fe,Ni)₉S₈</td><td>Ligas inoxidáveis, baterias</td></tr>
+      <tr><td>—</td><td>Titânio (Ti)</td><td>Rutilo</td><td>TiO₂</td><td>Ligas leves, pigmentos brancos</td></tr>
+    </tbody>
+  </table>
+</body>
+</html>
